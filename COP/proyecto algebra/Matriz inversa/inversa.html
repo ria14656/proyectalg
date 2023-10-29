@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="style.css" rel="stylesheet">
+   <title>MULTIPLICACION</title>
+  <meta charset="UTF-8">
+
+</head>
+<body>  
+ <center><h1>MATRIZ INVERSA</h1></center>
+
+    <blockquote ><h2><CEnter>MATRIZ</h2></CEnter>
+        <blockquote >
+        <input type="number" id="txtNumero1" placeholder="numero1" value="2">
+        <input type="number" id="txtNumero2" placeholder="numero2" value="-2">
+        <input type="number" id="txtNumero3" placeholder="numero3" value="2">
+        </blockquote>
+       
+        <blockquote>
+        <input type="number" id="txtNumero4" placeholder="numero4" value="2">
+        <input type="number" id="txtNumero5" placeholder="numero5" value="1">
+        <input type="number" id="txtNumero6" placeholder="numero6" value="0">
+        </blockquote>
+        <blockquote>
+        <input type="number" id="txtNumero7" placeholder="numero7" value="3">
+        <input type="number" id="txtNumero8" placeholder="numero8" value="-2">
+        <input type="number" id="txtNumero9" placeholder="numero9" value="2">
+    </blockquote>
+
+    
+    <button onclick="determinante()">determinante</button>
+    <input type="number" id="determinante" placeholder=""
+
+
+    </blockquote>
+    <blockquote><CEnter><H2>MATRIZ TRASPUESTA</H2></CEnter>
+      
+        <blockquote >
+            <input type="number" id="traspuesta1" placeholder="Número 1" value="">
+            <input type="number" id="traspuesta2" placeholder="Número 2" value="">
+            <input type="number" id="traspuesta3" placeholder="Número 3" value="">
+            </blockquote>
+            <blockquote>
+            <input type="number" id="traspuesta4" placeholder="Número 4" value="">
+            <input type="number" id="traspuesta5" placeholder="Número 5" value="">
+            <input type="number" id="traspuesta6" placeholder="Número 6" value="">
+            </blockquote>
+            <blockquote>
+            <input type="number" id="traspuesta7" placeholder="Número 7" value="">
+            <input type="number" id="traspuesta8" placeholder="Número 8" value="">
+            <input type="number" id="traspuesta9" placeholder="Número 9" value="">
+    </blockquote>
+
+    <button onclick="traspuesta()">traspuesta</button>
+    
+    <blockquote> <center><H2>MATRIZ ADJUNTA</H2></center>
+        <blockquote>
+        <input type="number" id="adjunta1" placeholder="">
+        <input type="number" id="adjunta2" placeholder="">
+        <input type="number" id="adjunta3" placeholder="">
+        </blockquote>
+        <blockquote>
+        <input type="number" id="adjunta4" placeholder="">
+        <input type="number" id="adjunta5" placeholder="">
+        <input type="number" id="adjunta6" placeholder="">
+        </blockquote>
+        <blockquote>
+        <input type="number" id="adjunta7" placeholder="">
+        <input type="number" id="adjunta8" placeholder="">
+        <input type="number" id="adjunta9" placeholder="">
+        </blockquote>
+    </blockquote>
+
+    <blockquote> <center><H2>MATRIZ INVERSA</H2></center>
+      <blockquote>
+      <input type="number" id="Inversa1" placeholder="">
+      <input type="number" id="Inversa2" placeholder="">
+      <input type="number" id="Inversa3" placeholder="">
+      </blockquote>
+      <blockquote>
+      <input type="number" id="Inversa4" placeholder="">
+      <input type="number" id="Inversa5" placeholder="">
+      <input type="number" id="Inversa6" placeholder="">
+      </blockquote>
+      <blockquote>
+      <input type="number" id="Inversa7" placeholder="">
+      <input type="number" id="Inversa8" placeholder="">
+      <input type="number" id="Inversa9" placeholder="">
+      </blockquote>
+  </blockquote>
+
+  <button onclick="inversa()">inversa</button>
+    
+
+
+
+
+<script>
+function determinante() {
+  // Obtenemos  los numeros ingresados
+  var numero1 = document.getElementById("txtNumero1").value;
+  var numero2 = document.getElementById("txtNumero2").value;
+  var numero3 = document.getElementById("txtNumero3").value;
+  var numero4 = document.getElementById("txtNumero4").value;
+  var numero5 = document.getElementById("txtNumero5").value;
+  var numero6 = document.getElementById("txtNumero6").value;
+  var numero7 = document.getElementById("txtNumero7").value;
+  var numero8 = document.getElementById("txtNumero8").value;
+  var numero9 = document.getElementById("txtNumero9").value;
+  
+
+  // Realizamos la multiplicación y suma para el determinate
+  var ResltadoDeterminate = numero1 * numero5 * numero9 + numero4 * numero8 * numero3 + numero2 * numero6 * numero7 -(numero7 *numero5 * numero3 + numero1 * numero6 * numero8 + numero2 * numero4 * numero9)
+  
+   // Imprimimos el resultado de la determinante
+   document.getElementById("determinante").value = ResltadoDeterminate;
+
+  //definimos las operaciones para obtener la matriz adjunta
+  var adjunta1 = tras5 * tras9 - tras6 * tras8
+  var adjunta2 = -(tras4 * tras9 - tras7 * tras6)
+  var adjunta3 = tras4 * tras8 - tras7 * tras5
+  var adjunta4 = -(tras2 * tras9 - tras8 * tras3)
+  var adjunta5 = tras1 * tras9 - tras7 * tras3
+  var adjunta6 = -(tras1 * tras8 - tras7 * tras2)
+  var adjunta7 = tras2 * tras6 - tras5 * tras3
+  var adjunta8 = -(tras1 * tras6 - tras4 * tras3)
+  var adjunta9 = tras1 * tras5 - tras4 * tras2
+
+  //imprimimos los resltados en la matriz adjunta
+  document.getElementById("adjunta1").value =adjunta1
+  document.getElementById("adjunta2").value =adjunta2
+  document.getElementById("adjunta3").value =adjunta3
+  document.getElementById("adjunta4").value =adjunta4
+  document.getElementById("adjunta5").value =adjunta5
+  document.getElementById("adjunta6").value =adjunta6
+  document.getElementById("adjunta7").value =adjunta7
+  document.getElementById("adjunta8").value =adjunta8
+  document.getElementById("adjunta9").value =adjunta9
+
+  
+}
+
+function traspuesta(){
+ 
+
+
+  // cambiamos los valores de posicion para tener la transpuesta
+  var tras1 =numero1
+  var tras2 =numero4
+  var tras3 =numero7
+  var tras4 =numero2
+  var tras5 =numero5
+  var tras6 =numero8
+  var tras7 =numero3
+  var tras8 =numero6
+  var tras9 =numero9
+  // imprimimos los resultados
+  document.getElementById("traspuesta1").value =tras1
+  document.getElementById("traspuesta2").value =tras2
+  document.getElementById("traspuesta3").value =tras3
+  document.getElementById("traspuesta4").value =tras4
+  document.getElementById("traspuesta5").value =tras5
+  document.getElementById("traspuesta6").value =tras6
+  document.getElementById("traspuesta7").value =tras7
+  document.getElementById("traspuesta8").value =tras8
+  document.getElementById("traspuesta9").value =tras9
+
+}
+
+function inversa(){
+  // definimos los valores para la matriz inversa
+  var Inversa1 =adjunta1/ResltadoDeterminate
+  var Inversa2 =adjunta2/ResltadoDeterminate
+  var Inversa3 =adjunta3/ResltadoDeterminate
+  var Inversa4 =adjunta4/ResltadoDeterminate
+  var Inversa5 =adjunta5/ResltadoDeterminate
+  var Inversa6 =adjunta6/ResltadoDeterminate
+  var Inversa7 =adjunta7/ResltadoDeterminate
+  var Inversa8 =adjunta8/ResltadoDeterminate
+  var Inversa9 =adjunta9/ResltadoDeterminate
+
+  // imprimimos los valores en la matriz inversa
+  document.getElementById("Inversa1").value =Inversa1
+  document.getElementById("Inversa2").value =Inversa2
+  document.getElementById("Inversa3").value =Inversa3
+  document.getElementById("Inversa4").value =Inversa4
+  document.getElementById("Inversa5").value =Inversa5
+  document.getElementById("Inversa6").value =Inversa6
+  document.getElementById("Inversa7").value =Inversa7
+  document.getElementById("Inversa8").value =Inversa8
+  document.getElementById("Inversa9").value =Inversa9
+
+
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200;300;400;600;700&family=Yellowtail&display=swap');
+*{
+    font-family: "Titillium Web";
+    margin: 0;
+    padding: 0;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+inicio{
+    background-image: url(images.jpg);
+    background-size: cover;
+    background-position: center center;
+    color: white;
+
+}
+body{
+    font-family: Arial, Helvetica;
+    background: #0a013d;
+    background-image: url(juju.jpg);
+    background-size: cover;
+    background-position: center center;
+    color: white;
+}
+
+
+.menu{
+    list-style: none;
+    padding: 0;
+    background: #020d3f;
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.menu li a{
+    text-decoration: none;
+    color: white;
+    padding: 20px;
+    display: block;
+}
+
+.menu li{
+    display: inline-block;
+    text-align: center;
+}
+
+
+
+.menu li:hover{
+    background: #0b0231;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    margin-top: 30px;
+}
+
+div {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+}
+
+input[type="text"] {
+    width: 300px;
+}
+
+button {
+    margin-top: 10px;
+}
+
+#graph {
+    width: 600px;
+    height: 400px;
+    margin: 0 auto;
+}

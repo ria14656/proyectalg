@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>MULTIPLICACION</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>  
+ <center><h1>MULTIPLICACION DE MATRICES 3X3</h1></center>
+
+    <blockquote ><h2><CEnter>PRIMERA MATRIZ</h2></CEnter>
+        <blockquote >
+        <input type="number" id="txtNumero00" placeholder="Número 1" value="2">
+        <input type="number" id="txtNumero01" placeholder="Número 2" value="-2">
+        <input type="number" id="txtNumero02" placeholder="Número 3" value="">
+        </blockquote>
+        <blockquote>
+        <input type="number" id="txtNumero10" placeholder="Número 4" value="1">
+        <input type="number" id="txtNumero11" placeholder="Número 5" value="1">
+        <input type="number" id="txtNumero12" placeholder="Número 6" value="1">
+        </blockquote>
+        <blockquote>
+        <input type="number" id="txtNumero20" placeholder="Número 7" value="1">
+        <input type="number" id="txtNumero21" placeholder="Número 8" value="4">
+        <input type="number" id="txtNumero22" placeholder="Número 9" value="0">
+    </blockquote>
+
+    </blockquote>
+    <blockquote><CEnter><H2>SEGUNDA MATRIZ</H2></CEnter>
+        <blockquote >
+            <input type="number" id="txtNumero00_" placeholder="Número 1" value="1">
+            <input type="number" id="txtNumero01_" placeholder="Número 2" value="2">
+            <input type="number" id="txtNumero02_" placeholder="Número 3" value="0">
+            </blockquote>
+            <blockquote>
+            <input type="number" id="txtNumero10_" placeholder="Número 4" value="1">
+            <input type="number" id="txtNumero11_" placeholder="Número 5" value="1">
+            <input type="number" id="txtNumero12_" placeholder="Número 6" value="1">
+            </blockquote>
+            <blockquote>
+            <input type="number" id="txtNumero20_" placeholder="Número 7" value="1">
+            <input type="number" id="txtNumero21_" placeholder="Número 8" value="4">
+            <input type="number" id="txtNumero22_" placeholder="Número 9" value="0">
+    </blockquote>
+
+    <blockquote> <center><H2>RESULTADO</H2></center>
+        <blockquote>
+        <input type="number" id="respuesta1" placeholder="">
+        <input type="number" id="respuesta2" placeholder="">
+        <input type="number" id="respuesta3" placeholder="">
+        </blockquote>
+        <blockquote>
+        <input type="number" id="respuesta4" placeholder="">
+        <input type="number" id="respuesta5" placeholder="">
+        <input type="number" id="respuesta6" placeholder="">
+        </blockquote>
+        <blockquote>
+        <input type="number" id="respuesta7" placeholder="">
+        <input type="number" id="respuesta8" placeholder="">
+        <input type="number" id="respuesta9" placeholder="">
+        </blockquote>
+    </blockquote>
+
+
+  <button onclick="multiplicar()">Multiplicar</button>
+
+  <p id="respuesta1"></p>
+
+<script>
+function multiplicar() {
+  // Obtenemos los números ingresados por el usuario
+  var numero00 = document.getElementById("txtNumero00").value;
+  var numero01 = document.getElementById("txtNumero01").value;
+  var numero02= document.getElementById("txtNumero02").value;
+  var numero10 = document.getElementById("txtNumero10").value;
+  var numero11 = document.getElementById("txtNumero11").value;
+  var numero12 = document.getElementById("txtNumero12").value;
+  var numero20 = document.getElementById("txtNumero20").value;
+  var numero21 = document.getElementById("txtNumero21").value;
+  var numero22 = document.getElementById("txtNumero22").value;
+  var numero00_ = document.getElementById("txtNumero00_").value;
+  var numero01_ = document.getElementById("txtNumero01_").value;
+  var numero02_ = document.getElementById("txtNumero02_").value;
+  var numero10_ = document.getElementById("txtNumero10_").value;
+  var numero11_ = document.getElementById("txtNumero11_").value;
+  var numero12_ = document.getElementById("txtNumero12_").value;
+  var numero20_ = document.getElementById("txtNumero20_").value;
+  var numero21_ = document.getElementById("txtNumero21_").value;
+  var numero22_ = document.getElementById("txtNumero22_").value;
+
+  // Realizamos la multiplicación
+  var res00 = numero00* numero00_ + numero01*numero10_ +numero02*numero20_;
+  var res01 = numero00* numero01_ + numero01*numero11_ +numero02*numero21_;
+  var res02 = numero00* numero02_ + numero01*numero12_ +numero02*numero22_;
+
+  var res10 = numero10* numero00_ + numero11*numero10_ +numero12*numero20_;
+  var res11 = numero10* numero01_ + numero11*numero11_ +numero12*numero21_;
+  var res12 = numero10* numero02_ + numero11*numero12_ +numero12*numero22_;
+
+  var res20 = numero20* numero00_ + numero21*numero10_ +numero22*numero20_;
+  var res21 = numero20* numero01_ + numero21*numero11_ +numero22*numero21_;
+  var res22 = numero20* numero02_ + numero21*numero12_ +numero22*numero22_;
+
+  // Imprimimos el resultado en respuesta1
+  document.getElementById("respuesta1").value = res00;
+  document.getElementById("respuesta2").value = res01;
+  document.getElementById("respuesta3").value = res02;
+
+  document.getElementById("respuesta4").value = res10;
+  document.getElementById("respuesta5").value = res11;
+  document.getElementById("respuesta6").value = res12;
+
+  document.getElementById("respuesta7").value = res20;
+  document.getElementById("respuesta8").value = res21;
+  document.getElementById("respuesta9").value = res22;
+}
+</script>
+</body>
+</html>

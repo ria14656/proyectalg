@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Calculadora de inversa de Gauss-Jordan</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="calculator">
+      <h1>Calculadora de inversa de Gauss-Jordan</h1>
+      <div class="input-matrix">
+        <label>Ingrese los valores de la matriz:</label>
+        <div class="row">
+          <input type="number" id="a11" placeholder="a11">
+          <input type="number" id="a12" placeholder="a12">
+          <input type="number" id="a13" placeholder="a13">
+        </div>
+        <div class="row">
+          <input type="number" id="a21" placeholder="a21">
+          <input type="number" id="a22" placeholder="a22">
+          <input type="number" id="a23" placeholder="a23">
+        </div>
+        <div class="row">
+          <input type="number" id="a31" placeholder="a31">
+          <input type="number" id="a32" placeholder="a32">
+          <input type="number" id="a33" placeholder="a33">
+        </div>
+      </div>
+      <button class="calculate-button" onclick="calcularInversa()">Calcular inversa</button>
+      <div class="output-matrix">
+        <label>Matriz inversa:</label>
+        <textarea id="inversa" rows="3" cols="20" readonly></textarea>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
